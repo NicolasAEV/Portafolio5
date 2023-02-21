@@ -1,0 +1,54 @@
+{
+    "productos": [
+        {
+            "id": "0001",
+            "nombre": "Cartera ",
+            "precio": 25000,
+            "stock": 10,
+            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "descripcion": "lala",
+            "categoria": "cartera",
+            "fecha_creacion": "12/12/2022"
+        },
+        {
+            "id": "0002",
+            "nombre": "Cartera ",
+            "precio": 25000,
+            "stock": 10,
+            "imagen": "https://staging.crochetisimo.com/wp-content/uploads/2021/08/Diseno-sin-titulo-1-8-1024x1024.jpg",
+            "descripcion": "lala",
+            "categoria": "cartera",
+            "fecha_creacion": "12/12/2022"
+        },
+        {
+            "id": "0003",
+            "nombre": "Cartera rosa",
+            "precio": 25000,
+            "stock": 10,
+            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "descripcion": "lala",
+            "categoria": "cartera",
+            "fecha_creacion": "12/12/2022"
+        },
+        {
+            "id": "0004",
+            "nombre": "Cartera cafe",
+            "precio": 25000,
+            "stock": 10,
+            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "descripcion": "lala",
+            "categoria": "cartera",
+            "fecha_creacion": "12/12/2022"
+        },
+        {
+            "id": "0005",
+            "nombre": "Cartera negra",
+            "precio": 25000,
+            "stock": "10",
+            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "descripcion": "lala",
+            "categoria": "cartera",
+            "fecha_creacion": "12/12/2022"
+        }
+    ]
+}
