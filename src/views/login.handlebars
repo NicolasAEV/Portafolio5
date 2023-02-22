@@ -1,41 +1,25 @@
-<main class="w-full h-full mt-20">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--taildwind-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  
+  <title>{{tittle}}</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+<main class="w-full h-full ">
     <div class="grid grid-cols-2 h-full ">
-        <div class="bg-red-200">
-
-        </div>
-        <div class="">
-            <form action="" class="space-y-8 mt-10 grid justify-center">
-                <div>
-                    <img src="img/logo.png" alt="logo" class="h-40 max-w-lg mx-auto">
-                    <h2 class="text-center text-3xl text-bold">Login</h2>
-                </div>
-
-                <div>
-                    <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-500">Correo
-                        electronico</label>
-                    <input type="email" name="correo" class="w-full rounded-lg">
-                </div>
-                <div>
-                    <label for=""
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-500">Contraseña</label>
-                    <input type="password" name="password-login"class="w-full rounded-lg">
-                    <div>   
-                        <button type="submit"
-                            class="text-white bg-emerald-400 m-10 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Iniciar
-                            sesion</button>
-                    </div>
-                    <div>
-                    <a href="#" class="block text-sm text-bold text-center">Registro</a>
-                   <a href="#" class="block text-sm text-bold text-center">Olvidaste tu Contraseña? </a>
-
-
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="grid grid-cols-2 h-full ">
-        <div class="">
-            <form action="" class="space-y-8 mt-10 grid justify-center content-center">
+       <div class="">
+            <form action="" class="space-y-4 mt-10 grid justify-center content-center">
                 <div>
                     <img src="img/logo.png" alt="logo" class="h-40 max-w-lg mx-auto">
                     <h2 class="text-center text-3xl text-bold">Registro</h2>
@@ -61,15 +45,50 @@
                     <input type="date" name="fechaReg" class="w-full rounded-lg">
                 </div>
                 <div>
+                       <button type="submit"
+                            class="text-white bg-emerald-400 m-10 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Registrar</button>
+                </div>
+                <div>
                     <a href="#" class="block text-sm text-bold text-center">Login </a>
-                  
+                </div>
+            </form>
+        </div>
+        <div class="">
+            <form action="" class="space-y-4 mt-10 grid justify-center">
+                <div>
+                    <img src="img/logo.png" alt="logo" class="h-40 max-w-lg mx-auto">
+                    <h2 class="text-center text-3xl text-bold">Login</h2>
+                </div>
+
+                <div>
+                    <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-500">Correo
+                        electronico</label>
+                    <input type="email" name="correo" class="w-full rounded-lg">
+                </div>
+                <div>
+                    <label for=""
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-500">Contraseña</label>
+                    <input type="password" name="password-login"class="w-full rounded-lg">
+                    <div>   
+                        <button type="submit"
+                            class="text-white bg-emerald-400 m-10 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Iniciar
+                            sesion</button>
+                    </div>
+                    <div>
+                    <a href="#" class="block text-sm text-bold text-center">Registro</a>
+                   <a href="#" class="block text-sm text-bold text-center">Olvidaste tu Contraseña? </a>
+                   <a href="/" class="block text-sm text-bold text-center">volver a inicio? </a>
+
+
                 </div>
             </form>
         </div>
     </div>
 
-    <div class="bg-red-200 h-full">
-        
-    </div>
 
 </main>
+
+<script src="/js/modal.js"></script>
+</body>
+
+</html>

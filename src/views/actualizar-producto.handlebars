@@ -1,0 +1,47 @@
+    {{#each producto}}
+
+<div class="container mx-auto mt-20 w-2/3">
+    <div class="mt-20">
+           <h3 class="text-center text-3xl m-5">Actualizar producto</h3>
+         <form action="/actualizar/{{this.id}}" method="post" class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 ">
+
+            <div class="col-span-1">
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900">id producto</label>
+                <input type="text"    class="bg-gray-200 text-white sm:w-full sm:w-3/4 mb:w3/4 lg:w-11/12  rounded-lg " name="id" id="modalid" value="{{this.id}}" disabled >
+            </div>
+             <div class="col-span-1">
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900">Nombre producto</label>
+                <input type="text"  value="{{this.nombre}}"  class=" sm:w-full sm:w-3/4 mb:w3/4 lg:w-11/12  rounded-lg " name="nombre" id="modalnombre" placeholder="Ingrese nombre producto" required>
+            </div>
+          <div class="col-span-1">
+                <label for=""  class="block mb-2 text-sm font-medium text-gray-900">Precio</label>
+                <input type="text" value="{{this.precio}}"  class=" sm:w-full sm:w-3/4 mb:w3/4 lg:w-11/12  rounded-lg " name="precio" id="modalprecio" placeholder="Ingrese precio producto" required>
+            </div>
+           <div class="col-span-1">
+                <label for=""  class="block mb-2 text-sm font-medium text-gray-900">Stock</label>
+                <input type="number" value="{{this.stock}}" class=" sm:w-full sm:w-3/4 mb:w3/4 lg:w-11/12  rounded-lg "  name="stock" id="modalstock" placeholder="Ingrese stock producto" required>
+            </div>
+           <div class="col-span-1">
+                <label for=""  class="block mb-2 text-sm font-medium text-gray-900">Imagen Url</label>
+                <input type="url" value="{{this.imagen}}" class=" sm:w-full sm:w-3/4 mb:w3/4 lg:w-11/12  rounded-lg " name="imagen" id="modalimagen" placeholder="Ingrese imagen producto" required>
+            </div>
+              <div class="col-span-1">
+                <label for="" class="block mb-2 text-sm font-medium text-gray-900">categoria</label>
+                <input type="text" value="{{this.categoria}}"  class=" sm:w-full sm:w-3/4 mb:w3/4 lg:w-11/12 rounded-lg " name="categoria" id="modalcategoria" placeholder="Ingrese categoria producto" required>
+            </div>
+            <div class="col-span-full">
+                <label for=""  class="block mb-2 text-sm font-medium text-gray-900">Descripcion</label>
+                <textarea class="w-full rounded-lg" name="descripcion" id="modaldescripcion" cols="10" rows="5" class="w-full" placeholder="Ingrese descripcion producto" required>{{this.descripcion}}</textarea>
+            </div> 
+            <div class="grid grid-cols-2 justify-center col-span-full mt-5">
+                <button type="submit"
+                  class="text-white bg-emerald-400 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Actualizar</button>
+                  <a 
+                  class="text-white bg-red-400 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 close-modal">Cerrar</a>
+           
+            </div>
+
+        </form>
+    </div>
+</div>
+ {{/each}}
