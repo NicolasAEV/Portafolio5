@@ -31,8 +31,8 @@ uuid
 ```
 $ git clone https://example.com
 $ cd ../path/to/the/file
-$ git i 
-$ npm run dev : inicializar proyecto
+$ npm i : inicializar proyecto
+$ npm run dev : correr proyecto
 ```
 ## github
 ***
