@@ -15,6 +15,19 @@ const { stringify } = require('querystring');
 // se establece el puerto a utilizar
 const port = 3000;
 //importamos las rutas
+//rutas iniciales de la pagina
+const routerIndex = require('./routes/index.js')
+const routerProductos = require('./routes/products.js')
+const routerSobreNosotros = require('./routes/about-us.js')
+const routerContacto = require('./routes/contact.js')
+//ruta de inicio de sesion y registro
+const routerLogin = require('./routes/login.js')
+//ruta de error
+const error = require('./routes/404.js')
+//ruta de crud
+const routerInventario = require('./routes/inventory.js')
+const routerActualizarPro = require('./routes/actualizar-producto.js')
+const routerInfoPro = require('./routes/info-producto.js')
 
 //en caso de utilizar envio entre servidores
 app.use(express.json());
@@ -24,176 +37,24 @@ app.use(cors())
 //union de archivos estaticos y rutas dinamicas
 app.use(express.static(path.join(__dirname, 'public')));
 //inicio de rutas
-router.get("/", (req, res) => {
-    //leemos el archivo .json asignando el modo de lectura utf-8 para carracteres especiales
-  fs.readFile("product.json", "utf8", (error, data) => {
-    if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD." })
-    let objetoPro = JSON.parse(data);
-    //obetenmos los datos y los guardamos en una variable para ser enviados a la pagina
-    res.render('index', {
-      productos: objetoPro.productos,
-      tittle: "inicio"
-    });
-  })
-})
-router.get("/products", (req, res) => {
-    //leemos el archivo .json asignando el modo de lectura utf-8 para carracteres especiales
-
-  fs.readFile("product.json", "utf8", (error, data) => {
-    if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD." })
-    let objetoPro = JSON.parse(data);
-    //obetenmos los datos y los guardamos en una variable para ser enviados a la pagina
-    res.render('products', {
-      productos: objetoPro.productos,
-      tittle: "productos"
-    });
-  })
-})
-
-router.get("/inventario", (req, res) => {
-    //leemos el archivo .json asignando el modo de lectura utf-8 para carracteres especiales
-
-  fs.readFile("product.json", "utf8", (error, data) => {
-    if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD." })
-    let objetoPro = JSON.parse(data);
-    //obetenmos los datos y los guardamos en una variable para ser enviados a la pagina
-    res.render('inventory', {
-      productos: objetoPro.productos,
-      tittle: "inventario"
-    });
-  })
-})
-//crear producto
-  .post("/inventario", (req, res) => {
-    //obtenemos todos los datos del form y destructuramos aquellos
-    let { nombre,
-      precio,
-      stock,
-      imagen,
-      descripcion,
-      categoria
-    } = req.body;
-    //los asignamos a una nueva variable 
-    let nuevoProducto = {
-      id: uuid().slice(0, 6),
-      nombre,
-      precio,
-      stock,
-      imagen,
-      descripcion,
-      categoria
-    };
-    //leemos el archivo .json asignando el modo de lectura utf-8 para carracteres especiales
-    fs.readFile("product.json", "utf8", (error, data) => {
-      if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD JSON." })
-      //asignamos los datos del archuivo JSON los paraciamos y le asignamos a una variable
-      let objetoPro = JSON.parse(data);
-      //insertamos a esa variable el nuevo producto con .PUSH
-      objetoPro.productos.push(nuevoProducto);
-      //sobreescribimos los datos entro del archvio
-      fs.writeFile("product.json", JSON.stringify(objetoPro, null, 4), "utf-8", (error) => {
-        if (error) return res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });
-        res.render('inventory', {
-          productos: objetoPro.productos,
-          tittle: "inventario"
-        });
-      })
-    })
-  })
-  //eliminar producto
-  .get("/inventario/:id", (req, res) => {
-     let idProducto =  req.params.id;
-       //leemos el archivo .json asignando el modo de lectura utf-8 para carracteres especiales
-    fs.readFile("product.json", "utf8", (error, data) => {
-      if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD JSON." })
-      //asignamos los datos del archuivo JSON los paraciamos y le asignamos a una variable
-      let objetoPro = JSON.parse(data);
-      //filtramos todos los objetos quie no tengan el id del producto y guardamos en una variable
-      objetoPro.productos = objetoPro.productos.filter(producto => producto.id != idProducto);
-      //sobreescribimos los datos entro del archvio
-      fs.writeFile("product.json", JSON.stringify(objetoPro, null, 4), "utf-8", (error) => {
-        if (error) return res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });
-        res.render('inventory', {
-          productos: objetoPro.productos,
-          tittle: "inventario"
-        });
-      })
-    })
-  })
-//buscar producto para actualizar y rellenar campos
-router.get('/buscarproducto/:id',(req,res)=>{
-  let id = req.params.id;
-  fs.readFile("product.json", "utf8", (err, data) => {
-      if(err) return res.status(500).send({code: 500, message: "No se pudo leer la información de productos."})
-      let objetoPro = JSON.parse(data);
-      let productoBuscado = objetoPro.productos.filter(producto => producto.id == id);
-      res.render('actualizar-producto',{
-        producto : productoBuscado,
-        tittle:'actualizar producto'});
-  })
-}) 
-router.post("/actualizar/:id", (req, res) => {
-  const {id} = req.params
-  let {
-     nombre,
-    precio,
-    stock,
-    imagen,
-    descripcion,
-    categoria
-  } = req.body;
-  console.log(id)
-  //leemos el archivo .json asignando el modo de lectura utf-8 para carracteres especiales
-fs.readFile("product.json", "utf8", (error, data) => {
- if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD JSON." })
- //asignamos los datos del archuivo JSON los paraciamos y le asignamos a una variable
- let objetoPro = JSON.parse(data);
- //filtramos todos los objetos quie no tengan el id del producto y guardamos en una variable
- objetoEncontrado = objetoPro.productos.find(producto => producto.id == id);
- //actualizamos los valores de cada uno
- objetoEncontrado.nombre = nombre;
- objetoEncontrado.precio = precio;
- objetoEncontrado.stock = stock;
- objetoEncontrado.imagen = imagen;
- objetoEncontrado.descripcion = descripcion;
- objetoEncontrado.categoria = categoria;
-
- //sobreescribimos los datos entro del archvio
- fs.writeFile("product.json", JSON.stringify(objetoPro, null, 4), "utf-8", (error) => {
-   if (error) return res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });
-   res.render('inventory', {
-     productos: objetoPro.productos,
-     tittle: "inventario"
-   });
- })
-})
-})
+//ruta iniciales
+app.use('/',routerIndex)
+//ruta todos los productos
+app.use('/',routerProductos)
 //ruta sobre nosotros
-router.get('/about-us', (req, res) => [
-  res.render('about-us',{
-    tittle:'sobre nosotros'
-  })
-])
-//ruta sobre contatanos
-
-router.get('/contact', (req, res) => [
-  res.render('contact',{tittle:'contactanos'})
-])
-//ruta sobre login y registro
-
-router.get('/login', (req, res) => {
-  res.render('login',{
-     layout: false,
-     tittle: 'login' })
-})
-//ruta sobre error 404 no encontrada
-
-router.get('*', (req, res) => {
-  res.render('404',{
-    tittle: 'pagina no encontrada' 
-  })
-})
-//fin de rutas
+app.use('/',routerSobreNosotros)
+//ruta Contacto
+app.use('/',routerContacto)
+//ruta Login
+app.use('/',routerLogin)
+//ruta inventario
+app.use('/',routerInventario)
+//ruta Actualziar Producto
+app.use('/',routerActualizarPro)
+//ruta informacion sobre el producto a actualizar
+app.use('/',routerInfoPro)
+//ruta error pagina no encontrada
+app.use('/',error)
 
 //asignamos la union de los archivo views
 app.set("views", path.join(__dirname, "views/"));
@@ -212,7 +73,7 @@ app.set("view engine", ".handlebars");
 
 
 //routes se crea el prefijo de las rutas /
-app.use('/', router)
+// app.use('/', router)
 
 //escuchamos el puerto en el cual se mantendra encendido el servidor
 app.listen(port, () => {

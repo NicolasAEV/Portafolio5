@@ -49,6 +49,15 @@
             "descripcion": "lala",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
+        },
+        {
+            "id": "3fb98f",
+            "nombre": "jeans",
+            "precio": "12000",
+            "stock": "12",
+            "imagen": "https://cdn.shopify.com/s/files/1/0230/8263/1246/products/4060_00002_1600x.jpg?v=1671655380",
+            "descripcion": "asdasd",
+            "categoria": "ropa"
         }
     ]
 }
