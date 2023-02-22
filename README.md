@@ -36,7 +36,7 @@ $ npm run dev : inicializar proyecto
 ```
 ## github
 ***
-
+para acceder al modulo de inventario http://localhost:port/inventario
 perfil github https://github.com/NicolasAEV/Portafolio4
 
 
