@@ -1,41 +1,46 @@
-const express = require('express');
+import express, { Router, json, urlencoded } from 'express';
 const app = express();
 
-const router = express.Router()
+const router = Router()
 //llamamos a la biblioteca fileSystem para poder acceder a archivos JSON etc.
-const fs = require('fs');
+import fs from 'fs';
 //llamamos a la biblioteca path de mandera de poder unir archivos
-const path = require('path');
+import { join ,dirname} from 'path';
+import { fileURLToPath } from 'url';
+
+
 //importamos la biblioteca uuid para poder crear el id con esta
-const { v4: uuid } = require('uuid');
+import { v4 as uuid } from 'uuid';
 // obtenemos una funcion de exhbs
-const { create } = require('express-handlebars')
-const cors = require('cors');
-const { stringify } = require('querystring');
+import { create } from 'express-handlebars';
+import cors from 'cors';
+import { stringify } from 'querystring';
 // se establece el puerto a utilizar
 const port = 3000;
 //importamos las rutas
 //rutas iniciales de la pagina
-const routerIndex = require('./routes/index.js')
-const routerProductos = require('./routes/products.js')
-const routerSobreNosotros = require('./routes/about-us.js')
-const routerContacto = require('./routes/contact.js')
+import routerIndex from './routes/index.js';
+import routerProductos from './routes/products.js';
+import routerSobreNosotros from './routes/about-us.js';
+import routerContacto from './routes/contact.js';
 //ruta de inicio de sesion y registro
-const routerLogin = require('./routes/login.js')
+import routerLogin from './routes/login.js';
 //ruta de error
-const error = require('./routes/404.js')
+import error from './routes/404.js';
 //ruta de crud
-const routerInventario = require('./routes/inventory.js')
-const routerActualizarPro = require('./routes/actualizar-producto.js')
-const routerInfoPro = require('./routes/info-producto.js')
-
+import routerInventario from './routes/inventory.js';
+import routerActualizarPro from './routes/actualizar-producto.js';
+import routerInfoPro from './routes/info-producto.js';
+//ruta carrito
+import routerCart from './routes/cart.js';
 //en caso de utilizar envio entre servidores
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(json());
+app.use(urlencoded({ extended: false }));
 app.use(cors())
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 //union de archivos estaticos y rutas dinamicas
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(join(__dirname, 'public')));
 //inicio de rutas
 //ruta iniciales
 app.use('/',routerIndex)
@@ -53,18 +58,20 @@ app.use('/',routerInventario)
 app.use('/',routerActualizarPro)
 //ruta informacion sobre el producto a actualizar
 app.use('/',routerInfoPro)
+//ruta informacion carrito
+app.use('/',routerCart)
 //ruta error pagina no encontrada
 app.use('/',error)
 
 //asignamos la union de los archivo views
-app.set("views", path.join(__dirname, "views/"));
+app.set("views", join(__dirname, "views/"));
 //configuracion de motor hbs
 const hbs = create({
   //se define la pagina principal la cual contendra todo
   defaultLayout: "main",
   //definimos y unimos los layouts y partials
-  layoutsDir: path.join(app.get("views"), "layouts"),
-  partialsDir: path.join(app.get("views"), "partials"),
+  layoutsDir: join(app.get("views"), "layouts"),
+  partialsDir: join(app.get("views"), "partials"),
   //definimos la extencion a utilizar
   extname: ".handlebars",
 });
