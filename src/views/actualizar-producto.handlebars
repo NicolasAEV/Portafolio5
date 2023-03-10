@@ -1,9 +1,8 @@
-    {{#each producto}}
-
+{{#each productos}}
 <div class="container mx-auto mt-20 w-2/3">
     <div class="mt-20">
            <h3 class="text-center text-3xl m-5">Actualizar producto</h3>
-         <form action="/actualizar/{{this.id}}" method="post" class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 ">
+         <form id="formulario" class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 ">
 
             <div class="col-span-1">
                 <label for="" class="block mb-2 text-sm font-medium text-gray-900">id producto</label>
@@ -45,3 +44,5 @@
     </div>
 </div>
  {{/each}}
+
+<script defer src="/js/peticiones.js"></script>

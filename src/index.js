@@ -19,20 +19,14 @@ import { stringify } from 'querystring';
 const port = 3000;
 //importamos las rutas
 //rutas iniciales de la pagina
-import routerIndex from './routes/index.js';
-import routerProductos from './routes/products.js';
-import routerSobreNosotros from './routes/about-us.js';
-import routerContacto from './routes/contact.js';
-//ruta de inicio de sesion y registro
-import routerLogin from './routes/login.js';
-//ruta de error
-import error from './routes/404.js';
-//ruta de crud
-import routerInventario from './routes/inventory.js';
-import routerActualizarPro from './routes/actualizar-producto.js';
-import routerInfoPro from './routes/info-producto.js';
-//ruta carrito
-import routerCart from './routes/cart.js';
+
+// //rutas front end
+import routerViews from './routes/views.routes.js';
+//prueba api-rest
+import apiPorductos from './routes/productos.routes.js';
+import apiInventario from './routes/inventory.routes.js';
+
+
 //en caso de utilizar envio entre servidores
 app.use(json());
 app.use(urlencoded({ extended: false }));
@@ -42,26 +36,12 @@ const __dirname = dirname(__filename);
 //union de archivos estaticos y rutas dinamicas
 app.use(express.static(join(__dirname, 'public')));
 //inicio de rutas
-//ruta iniciales
-app.use('/',routerIndex)
-//ruta todos los productos
-app.use('/',routerProductos)
-//ruta sobre nosotros
-app.use('/',routerSobreNosotros)
-//ruta Contacto
-app.use('/',routerContacto)
-//ruta Login
-app.use('/',routerLogin)
-//ruta inventario
-app.use('/',routerInventario)
-//ruta Actualziar Producto
-app.use('/',routerActualizarPro)
-//ruta informacion sobre el producto a actualizar
-app.use('/',routerInfoPro)
-//ruta informacion carrito
-app.use('/',routerCart)
-//ruta error pagina no encontrada
-app.use('/',error)
+///prueba
+
+app.use('/',apiPorductos)
+app.use('/',apiInventario)
+app.use('/',routerViews)
+
 
 //asignamos la union de los archivo views
 app.set("views", join(__dirname, "views/"));
