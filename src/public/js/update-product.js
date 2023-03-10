@@ -22,7 +22,23 @@ formulario.addEventListener('submit',(e)=>{
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    fetch('http://localhost:3000/api/actualizar/')
-     .then
+    fetch("http://localhost:3000/api/inventario", {
+        method: "PUT",
+        headers: myHeaders,
+        body: JSON.stringify(productoActualizado)
+    })
+     .then(response => response.json())
+     .then(data =>{
+        if(data.code == 500 || data.code == 400){
+            console.log(data.message)
+        }else{
+            console.log('aca')
+            location.href = "http://localhost:3000/inventario";
+        }
+    })
+    .catch(error => {
+        console.log(error)
+        alert("Algo ha salido mal al cargar los productos.")
+    })
     console.log(productoActualizado)
 })

@@ -5,27 +5,27 @@
             "nombre": "Cartera ",
             "precio": "25000",
             "stock": "10",
-            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "imagen": "https://img.ltwebstatic.com/images3_pi/2021/08/02/1627888963575e5108dcae91fe02cbe1f9b5a38c59_thumbnail_600x.webp",
             "descripcion": "lala",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
         {
             "id": "0002",
-            "nombre": "Cartera ",
-            "precio": 25000,
-            "stock": 10,
-            "imagen": "https://staging.crochetisimo.com/wp-content/uploads/2021/08/Diseno-sin-titulo-1-8-1024x1024.jpg",
+            "nombre": "bolsa negra",
+            "precio": "25000",
+            "stock": "10",
+            "imagen": "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634810639ee3dfd5924f96f0bc15e98e68cae8f_thumbnail_600x.webp",
             "descripcion": "lala",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
         {
             "id": "0003",
-            "nombre": "Cartera rosa",
-            "precio": 25000,
-            "stock": 10,
-            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "nombre": "Cartera corazon",
+            "precio": "25000",
+            "stock": "10",
+            "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
             "descripcion": "lala",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
@@ -33,31 +33,31 @@
         {
             "id": "0004",
             "nombre": "Cartera cafe",
-            "precio": 25000,
-            "stock": 10,
-            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "precio": "25000",
+            "stock": "10",
+            "imagen": "https://img.ltwebstatic.com/images3_pi/2022/11/28/16695963982026712ce0aad8764b86953724f653c8_thumbnail_600x.webp",
             "descripcion": "lala",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
         {
             "id": "0005",
-            "nombre": "Cartera negra",
-            "precio": 25000,
+            "nombre": "monedero",
+            "precio": "25000",
             "stock": "10",
-            "imagen": "https://i.pinimg.com/564x/ee/85/28/ee8528b9084a6e627c3279195af16404.jpg",
+            "imagen": "https://img.ltwebstatic.com/images3_pi/2023/02/20/1676904194ef029c4af3c9a7958a04a96236a2fa7b_thumbnail_600x.webp",
             "descripcion": "lala",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
         {
-            "id": "3fb98f",
+            "id": "9446dd",
             "nombre": "jeans",
-            "precio": "12000",
-            "stock": "12",
-            "imagen": "https://cdn.shopify.com/s/files/1/0230/8263/1246/products/4060_00002_1600x.jpg?v=1671655380",
-            "descripcion": "asdasdasdasdasd",
-            "categoria": "ropa"
+            "precio": "250000",
+            "stock": "123123",
+            "imagen": "https://img.ltwebstatic.com/images3_pi/2022/01/13/1642047594ec5e31b1d513617579500ec88e37cd66_thumbnail_600x.webp",
+            "descripcion": "asdasdasd",
+            "categoria": "asdasdasd"
         }
     ]
 }

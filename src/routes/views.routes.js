@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
 })
 //mostrar productos
 router.get("/products", (req, res) => {
+  
   let productos = getProducts();
   res.render('products', {
     tittle: "productos",
