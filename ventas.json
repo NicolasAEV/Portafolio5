@@ -19,43 +19,7 @@
             "total": 250000
         },
         {
-            "id": "0f2259",
-            "fecha": "13-03-2023",
-            "productos": [
-                {
-                    "id": "0003",
-                    "nombre": "Cartera corazon",
-                    "precio": 25000,
-                    "stock": 100,
-                    "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
-                    "descripcion": "Nuestra adorable cartera en forma de corazón es el complemento perfecto para cualquier look romántico. Hecha con materiales suaves y resistentes, esta cartera cuenta con suficiente espacio para guardar tus pertenencias esenciales. Además, su diseño único y elegante es un gran detalle para cualquier atuendo",
-                    "categoria": "cartera",
-                    "fecha_creacion": "12/12/2022",
-                    "cantidad": 90
-                }
-            ],
-            "total": 2250000
-        },
-        {
-            "id": "8d68ab",
-            "fecha": "13-03-2023",
-            "productos": [
-                {
-                    "id": "0003",
-                    "nombre": "Cartera corazon",
-                    "precio": "25000",
-                    "stock": "100",
-                    "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
-                    "descripcion": "Nuestra adorable cartera en forma de corazón es el complemento perfecto para cualquier look romántico. Hecha con materiales suaves y resistentes, esta cartera cuenta con suficiente espacio para guardar tus pertenencias esenciales. Además, su diseño único y elegante es un gran detalle para cualquier atuendo",
-                    "categoria": "cartera",
-                    "fecha_creacion": "12/12/2022",
-                    "cantidad": 8
-                }
-            ],
-            "total": 200000
-        },
-        {
-            "id": "580341",
+            "id": "373e93",
             "fecha": "13-03-2023",
             "productos": [
                 {
@@ -67,10 +31,38 @@
                     "descripcion": "Nuestro monedero es un complemento imprescindible para cualquier persona que busque mantener sus pertenencias organizadas. Hecho con materiales resistentes y duraderos, este monedero es perfecto para guardar tus monedas y billetes. Además, su tamaño compacto lo hace fácil de llevar contigo a donde quiera que vayas",
                     "categoria": "cartera",
                     "fecha_creacion": "12/12/2022",
-                    "cantidad": 13
+                    "cantidad": 1
                 }
             ],
-            "total": 325000
+            "total": 25000
+        },
+        {
+            "id": "ffe2d8",
+            "fecha": "13-03-2023",
+            "productos": [
+                {
+                    "id": "0002",
+                    "nombre": "bolsa negra",
+                    "precio": "25000",
+                    "stock": "100",
+                    "imagen": "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634810639ee3dfd5924f96f0bc15e98e68cae8f_thumbnail_600x.webp",
+                    "descripcion": "Esta moderna bolsa negra es un accesorio imprescindible para cualquier mujer con estilo. Hecha con materiales de alta calidad, esta bolsa es resistente y espaciosa, lo que la hace perfecta para guardar tus pertenencias diarias. Además, su diseño elegante y versátil combina fácilmente con cualquier outfit",
+                    "categoria": "cartera",
+                    "fecha_creacion": "12/12/2022",
+                    "cantidad": 1
+                },
+                {
+                    "id": "9446dd",
+                    "nombre": "jeans",
+                    "precio": "250000",
+                    "stock": "100",
+                    "imagen": "https://img.ltwebstatic.com/images3_pi/2022/01/13/1642047594ec5e31b1d513617579500ec88e37cd66_thumbnail_600x.webp",
+                    "descripcion": "Nuestros jeans son la elección perfecta para aquellos que buscan comodidad y durabilidad en una prenda de vestir. Hechos con materiales de alta calidad, estos jeans son resistentes y cómodos. Su diseño clásico y versátil los hace perfectos para cualquier ocasión.",
+                    "categoria": "asdasdasd",
+                    "cantidad": 1
+                }
+            ],
+            "total": 275000
         }
     ]
 }

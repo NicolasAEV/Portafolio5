@@ -26,12 +26,14 @@ router.get("/products", (req, res) => {
 //detalle producto
 router.get("/detalle/:id", (req, res) => {
   let {id} = req.params
+  let productos =  getProducts()
+  productos = productos.productos.splice(0 , 6)
   let producto = {producto : getProductForID(id)};
   // let productos = getProductForID();
-
   res.render('detalle', {
     tittle: "detalle producto",
-    producto : producto
+    producto : producto,
+    productos :productos
   })
 })
 //carrito

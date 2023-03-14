@@ -39,6 +39,8 @@ app.use(apiPorductos)
 app.use(apiInventario)
 app.use(apiVentas)
 app.use(routerViews)
+
+// 
 app.use(err404)
 
 

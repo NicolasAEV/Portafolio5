@@ -13,7 +13,6 @@ router.get("/api/ventas", (req, res) => {
   })
 }).post("/api/ventas", (req, res) => {
   let productos = req.body;
-
   let ventas = {
     id: uuid().slice(0, 6),
     fecha: moment().format('DD-MM-YYYY'),
@@ -21,6 +20,7 @@ router.get("/api/ventas", (req, res) => {
     total: 0
   }
   let productosTienda = JSON.parse(fs.readFileSync("product.json", "utf-8"));
+
   ventas.productos.forEach(producto => {
     let productoEncontrado = productosTienda.productos.find(element => element.id == producto.id)
     ventas.total += productoEncontrado.precio * producto.cantidad;
@@ -30,7 +30,6 @@ router.get("/api/ventas", (req, res) => {
     if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD JSON." })
     //asignamos los datos del archuivo JSON los paraciamos y le asignamos a una variable
     let objetoPro = JSON.parse(data);
-   
     //insertamos a esa variable el nuevo producto con .PUSH
     objetoPro.venta.push(ventas);
     //sobreescribimos los datos entro del archvio
@@ -44,13 +43,8 @@ router.get("/api/ventas", (req, res) => {
 //add product to cart
 router.get("/api/carrito/:id", (req, res) => {
   try {
-    let carritoStorage = JSON.parse(localStorage.getItem("carrito")) || [];
-    console.log(req.params.id , 'despues de params')
     let producto = getProductForID(req.params.id);
-    console.log(producto)
     producto.cantidad = 1;
-    console.log(producto)
-
     res.status(200).json({ code: 200, data: producto })
   } catch {
     res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });

@@ -25,11 +25,11 @@ const cargarCarrito = () => {
                    </div>
                    <div class="flex flex-col content-center">
                        <h3 class="text-center">cantidad </h3>
-                      
+                       <div class="flex justify-between mx-10"> 
                        <a href="#"class="text-center text-xl font-bold hover:text-green-500"  max="${productos.stock}" onclick="sumar('${productos.id}')">+ </a>
-                       <p class="text-center"> ${productos.cantidad}</p>
+                       <p class="text-center " max="${productos.stock}"  min="0"> ${productos.cantidad}</p>
                        <a href="#"class="text-center text-xl font-bold hover:text-red-500" onclick="restar('${productos.id}')" min="0" max="${productos.stock}">- </a>
-                     
+                       </div>
 
                    </div>
                    <div class="flex flex-col">

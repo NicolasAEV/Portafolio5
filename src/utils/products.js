@@ -12,5 +12,4 @@ export const getProductForID = (id) =>{
 }
 
 
-
     // export default getProducts;

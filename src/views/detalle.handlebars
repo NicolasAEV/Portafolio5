@@ -20,13 +20,18 @@
                 Comprar
             </a> --}}
           
-            <a href="#" class="w-2/3 mx-auto py-3 bg-pink-400  hover:bg-pink-500 mt-10 transition-colors rounded text-white text-center text-xl" onclick="addProduct('{{this.id}}')">
+            <a href="#" class="w-2/3 mx-auto py-3 bg-pink-400  hover:bg-pink-500 mt-10 transition-colors rounded text-white text-center text-xl" onclick="addProduct('{{this.id}}' ,'{{this.stock}}')">
                 Comprar
             </a>
         
       
     </div>
     {{/each}}
+
+</div>
+<div class="mt-10">
+    <h2 class="mb-5 text-center text-3xl font-bold">productos recomendados</h2>
+{{>productos}}
 
 </div>
 <script src="/js/addproduct.js"></script>

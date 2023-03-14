@@ -1,8 +1,9 @@
 
 let carritoStorage = JSON.parse(localStorage.getItem("carrito")) || [];
 
-const addProduct = (id) => {
-    let url = "http://localhost:3000/api/carrito/" + id
+const addProduct = (id , stock) => {
+    console.log(id)
+    let url = "http://localhost:3000/api/carrito/" + id ; 
     console.log(url)
     fetch(url,{
         method: "GET"
