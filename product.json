@@ -4,9 +4,9 @@
             "id": "0001",
             "nombre": "Cartera ",
             "precio": "25000",
-            "stock": "10",
+            "stock": "100",
             "imagen": "https://img.ltwebstatic.com/images3_pi/2021/08/02/1627888963575e5108dcae91fe02cbe1f9b5a38c59_thumbnail_600x.webp",
-            "descripcion": "lala",
+            "descripcion": "Nuestra elegante cartera es perfecta para cualquier ocasión. Hecha con materiales de alta calidad, esta cartera es duradera y cuenta con suficientes compartimentos para mantener tus pertenencias organizadas. Su diseño clásico es fácil de combinar con cualquier atuendo, lo que la convierte en una excelente inversión para tu guardarropa",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
@@ -14,9 +14,9 @@
             "id": "0002",
             "nombre": "bolsa negra",
             "precio": "25000",
-            "stock": "10",
+            "stock": "100",
             "imagen": "https://img.ltwebstatic.com/images3_pi/2021/11/08/163634810639ee3dfd5924f96f0bc15e98e68cae8f_thumbnail_600x.webp",
-            "descripcion": "lala",
+            "descripcion": "Esta moderna bolsa negra es un accesorio imprescindible para cualquier mujer con estilo. Hecha con materiales de alta calidad, esta bolsa es resistente y espaciosa, lo que la hace perfecta para guardar tus pertenencias diarias. Además, su diseño elegante y versátil combina fácilmente con cualquier outfit",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
@@ -24,9 +24,9 @@
             "id": "0003",
             "nombre": "Cartera corazon",
             "precio": "25000",
-            "stock": "10",
+            "stock": "100",
             "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
-            "descripcion": "lala",
+            "descripcion": "Nuestra adorable cartera en forma de corazón es el complemento perfecto para cualquier look romántico. Hecha con materiales suaves y resistentes, esta cartera cuenta con suficiente espacio para guardar tus pertenencias esenciales. Además, su diseño único y elegante es un gran detalle para cualquier atuendo",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
@@ -34,9 +34,9 @@
             "id": "0004",
             "nombre": "Cartera cafe",
             "precio": "25000",
-            "stock": "10",
+            "stock": "100",
             "imagen": "https://img.ltwebstatic.com/images3_pi/2022/11/28/16695963982026712ce0aad8764b86953724f653c8_thumbnail_600x.webp",
-            "descripcion": "lala",
+            "descripcion": "La clásica cartera café nunca pasa de moda. Hecha con materiales de alta calidad, esta cartera es duradera y elegante. Cuenta con múltiples compartimentos para mantener tus pertenencias organizadas, lo que la convierte en la cartera perfecta para el uso diario,",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
@@ -44,9 +44,9 @@
             "id": "0005",
             "nombre": "monedero",
             "precio": "25000",
-            "stock": "10",
+            "stock": "100",
             "imagen": "https://img.ltwebstatic.com/images3_pi/2023/02/20/1676904194ef029c4af3c9a7958a04a96236a2fa7b_thumbnail_600x.webp",
-            "descripcion": "lala",
+            "descripcion": "Nuestro monedero es un complemento imprescindible para cualquier persona que busque mantener sus pertenencias organizadas. Hecho con materiales resistentes y duraderos, este monedero es perfecto para guardar tus monedas y billetes. Además, su tamaño compacto lo hace fácil de llevar contigo a donde quiera que vayas",
             "categoria": "cartera",
             "fecha_creacion": "12/12/2022"
         },
@@ -54,9 +54,9 @@
             "id": "9446dd",
             "nombre": "jeans",
             "precio": "250000",
-            "stock": "123123",
+            "stock": "100",
             "imagen": "https://img.ltwebstatic.com/images3_pi/2022/01/13/1642047594ec5e31b1d513617579500ec88e37cd66_thumbnail_600x.webp",
-            "descripcion": "asdasdasd",
+            "descripcion": "Nuestros jeans son la elección perfecta para aquellos que buscan comodidad y durabilidad en una prenda de vestir. Hechos con materiales de alta calidad, estos jeans son resistentes y cómodos. Su diseño clásico y versátil los hace perfectos para cualquier ocasión.",
             "categoria": "asdasdasd"
         }
     ]

@@ -9,8 +9,8 @@
     <h3 class="text-center text-2xl font-medium">{{this.nombre}}</h3>
     <p class="text-center text-sm my-2 ">precio : {{this.precio}}</p>
     <div class="flex justify-center m-5 gap-1 ">
-      <button
-        class="w-40 bg-pink-400 hover:bg-pink-500 text-white p-2 rounded transition-colors shadow-xl shadow-pink-200/60">Comprar</button>
+      <a href="/detalle/{{id}}"
+        class="w-40 bg-pink-400 hover:bg-pink-500 text-white text-center p-2 rounded transition-colors shadow-xl shadow-pink-200/60">Comprar</a>
     </div>
   </div>
   {{/each}}

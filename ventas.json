@@ -1,5 +1,76 @@
 {
-    "venta" :[{
-
-    }]
+    "venta": [
+        {
+            "id": "7ecf1a",
+            "fecha": "13-03-2023",
+            "productos": [
+                {
+                    "id": "0003",
+                    "nombre": "Cartera corazon",
+                    "precio": 25000,
+                    "stock": 100,
+                    "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
+                    "descripcion": "Nuestra adorable cartera en forma de corazón es el complemento perfecto para cualquier look romántico. Hecha con materiales suaves y resistentes, esta cartera cuenta con suficiente espacio para guardar tus pertenencias esenciales. Además, su diseño único y elegante es un gran detalle para cualquier atuendo",
+                    "categoria": "cartera",
+                    "fecha_creacion": "12/12/2022",
+                    "cantidad": 10
+                }
+            ],
+            "total": 250000
+        },
+        {
+            "id": "0f2259",
+            "fecha": "13-03-2023",
+            "productos": [
+                {
+                    "id": "0003",
+                    "nombre": "Cartera corazon",
+                    "precio": 25000,
+                    "stock": 100,
+                    "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
+                    "descripcion": "Nuestra adorable cartera en forma de corazón es el complemento perfecto para cualquier look romántico. Hecha con materiales suaves y resistentes, esta cartera cuenta con suficiente espacio para guardar tus pertenencias esenciales. Además, su diseño único y elegante es un gran detalle para cualquier atuendo",
+                    "categoria": "cartera",
+                    "fecha_creacion": "12/12/2022",
+                    "cantidad": 90
+                }
+            ],
+            "total": 2250000
+        },
+        {
+            "id": "8d68ab",
+            "fecha": "13-03-2023",
+            "productos": [
+                {
+                    "id": "0003",
+                    "nombre": "Cartera corazon",
+                    "precio": "25000",
+                    "stock": "100",
+                    "imagen": "https://img.ltwebstatic.com/images3_pi/2023/01/09/167324999403ae7cf6047059bd2f034f547c5e5acf_thumbnail_600x.webp",
+                    "descripcion": "Nuestra adorable cartera en forma de corazón es el complemento perfecto para cualquier look romántico. Hecha con materiales suaves y resistentes, esta cartera cuenta con suficiente espacio para guardar tus pertenencias esenciales. Además, su diseño único y elegante es un gran detalle para cualquier atuendo",
+                    "categoria": "cartera",
+                    "fecha_creacion": "12/12/2022",
+                    "cantidad": 8
+                }
+            ],
+            "total": 200000
+        },
+        {
+            "id": "580341",
+            "fecha": "13-03-2023",
+            "productos": [
+                {
+                    "id": "0005",
+                    "nombre": "monedero",
+                    "precio": "25000",
+                    "stock": "100",
+                    "imagen": "https://img.ltwebstatic.com/images3_pi/2023/02/20/1676904194ef029c4af3c9a7958a04a96236a2fa7b_thumbnail_600x.webp",
+                    "descripcion": "Nuestro monedero es un complemento imprescindible para cualquier persona que busque mantener sus pertenencias organizadas. Hecho con materiales resistentes y duraderos, este monedero es perfecto para guardar tus monedas y billetes. Además, su tamaño compacto lo hace fácil de llevar contigo a donde quiera que vayas",
+                    "categoria": "cartera",
+                    "fecha_creacion": "12/12/2022",
+                    "cantidad": 13
+                }
+            ],
+            "total": 325000
+        }
+    ]
 }

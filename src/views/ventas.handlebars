@@ -1,0 +1,19 @@
+<h1 class="text-center text-3xl mt-20 text-pink-500 font-bold">ventas</h1>
+{{#each ventas}}
+<div class="mx-auto w-2/3 md:w-1/2 mt-10 shadow-2xl mb-5">
+ <div class="grid grid-cols-1 md:flex justify-between p-5 ">
+    <div class="flex flex-col">
+     <p class="text-center font-semibold">ID VENTA :</p>
+     <p class="text-center text-pink-400">{{this.id}}</p>
+    </div>
+        <div class="flex flex-col">
+     <p class="text-center font-semibold">FECHA:</p>
+     <p class="text-center text-green-400">{{this.fecha}}</p>
+    </div>
+        <div class="flex flex-col">
+     <p class="text-center font-semibold">TOTAL DE LA COMPRA :</p>
+     <p class="text-center">{{this.total}}</p>
+    </div>
+ </div>
+</div>
+{{/each}}

@@ -1,8 +1,12 @@
 import { Router } from 'express';
-const router = Router()
+const router = Router();
 import { readFile } from 'fs';
 
-import {getProducts , getProductForID} from '../utils/products.js'
+import {getProducts , getProductForID} from '../utils/products.js';
+import {getVentas , getventasID} from '../utils/ventas.js';
+// let carritoStorage = JSON.parse(localStorage.getItem("carrito")) || [];
+
+
 //ruta inicio
 router.get("/", (req, res) => {
   let productos = getProducts();
@@ -13,20 +17,21 @@ router.get("/", (req, res) => {
 })
 //mostrar productos
 router.get("/products", (req, res) => {
-  
   let productos = getProducts();
   res.render('products', {
     tittle: "productos",
     productos : productos.productos
-
   })
 })
 //detalle producto
-router.get("/products/:id", (req, res) => {
-  let productos = getProductForID();
-  res.render('details-products', {
+router.get("/detalle/:id", (req, res) => {
+  let {id} = req.params
+  let producto = {producto : getProductForID(id)};
+  // let productos = getProductForID();
+
+  res.render('detalle', {
     tittle: "detalle producto",
-    productos : productos
+    producto : producto
   })
 })
 //carrito
@@ -35,13 +40,20 @@ router.get("/carrito", (req, res) => {
     tittle: "carrito"
   })
 })
+//ventas
+router.get("/ventas", (req, res) => {
+  let ventas = getVentas();
+  res.render('ventas', {
+    tittle: "registro ventas",
+    ventas : ventas.venta
+  })
+})
 //inventario
 router.get("/inventario", (req, res) => {
   let productos = getProducts();
   res.render('inventory', {
     tittle: "inventario",
     productos : productos.productos
-
   })
 })
 //actualizar 
@@ -73,8 +85,5 @@ router.get('/login', (req, res) => {
   })
 })
 
-//ruta error pagina o recurso no encontrado
-router.get('*', (req, res) => {
-  res.render('404')
-})
+
 export default router;

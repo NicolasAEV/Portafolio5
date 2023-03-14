@@ -1,0 +1,32 @@
+<div class="container w-full lg:w-3/5 mx-auto mt-20 grid grid-cols-1 md:grid-cols-4 rounded-lg shadow-lg">
+    {{#each producto}}
+
+    <div class="col-span-1 md:col-span-2 bg-cover ">
+        <img src="{{this.imagen}}" alt="imagen producto" class=" rounded-lg lg:rounded-l-lg">
+    </div>
+    <div class=" col-span-1 md:col-span-2 flex flex-col">
+        <div>
+            <h2 class="text-center text-4xl font-semibold text-pink-500">{{this.nombre}}</h2>   
+        </div>
+        <div class="grid grid-cols-2 mt-10">
+            <p class="text-md text-center font-medium rounded">stock : {{this.stock}}</p>
+            <p class="text-md font-medium rounded">cantidad : 1</p>
+        </div>
+        <div class="mt-10">
+            <p class="ml-10 text-left text-md font-semibold rounded">{{this.descripcion}}</p>
+        </div>
+     
+            {{!-- <a class="w-2/3 mx-auto py-3 bg-pink-400  hover:bg-pink-500 mt-10 transition-colors rounded text-white text-center text-xl" onclick="addProduct('{{this.id}}','{{this.stock}}')">
+                Comprar
+            </a> --}}
+          
+            <a href="#" class="w-2/3 mx-auto py-3 bg-pink-400  hover:bg-pink-500 mt-10 transition-colors rounded text-white text-center text-xl" onclick="addProduct('{{this.id}}')">
+                Comprar
+            </a>
+        
+      
+    </div>
+    {{/each}}
+
+</div>
+<script src="/js/addproduct.js"></script>
