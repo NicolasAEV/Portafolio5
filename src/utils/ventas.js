@@ -6,6 +6,7 @@ export  const getVentas = () =>{
     let data = fs.readFileSync("ventas.json", "utf8");
     return JSON.parse(data);
 }
+
 export const getventasID = (id) =>{
     let data = fs.readFileSync("ventas.json", "utf8");
     let producto = JSON.parse(data);

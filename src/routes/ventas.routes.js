@@ -1,3 +1,4 @@
+import { resolveObjectURL } from 'buffer';
 import { Router } from 'express';
 const router = Router();
 import fs from 'fs';
@@ -20,7 +21,6 @@ router.get("/api/ventas", (req, res) => {
     total: 0
   }
   let productosTienda = JSON.parse(fs.readFileSync("product.json", "utf-8"));
-
   ventas.productos.forEach(producto => {
     let productoEncontrado = productosTienda.productos.find(element => element.id == producto.id)
     ventas.total += productoEncontrado.precio * producto.cantidad;
@@ -32,12 +32,20 @@ router.get("/api/ventas", (req, res) => {
     let objetoPro = JSON.parse(data);
     //insertamos a esa variable el nuevo producto con .PUSH
     objetoPro.venta.push(ventas);
+    //actualizar stock
+
     //sobreescribimos los datos entro del archvio
     fs.writeFile("ventas.json", JSON.stringify(objetoPro, null, 4), "utf-8", (error) => {
       if (error) return res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });
+      descontarProductos(ventas).then(respuesta => {
+        console.log(respuesta)
+      }).catch(error => {
+        console.log("error: ", error)
+      })
       res.status(200).json({ code: 200, data: objetoPro.venta })
     })
   })
+ 
 })
 
 //add product to cart
@@ -50,5 +58,29 @@ router.get("/api/carrito/:id", (req, res) => {
     res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });
   }
 })
+
+
+const descontarProductos = (productosADescontar) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile("product.json", "utf8", (error, data) => {
+      if (error) return res.status(500).send({ code: 500, message: "Algo salió al leer la BD JSON." })
+      data = JSON.parse(data);
+      productosADescontar.productos.forEach(producto => {
+        let productoDescontado = data.productos.find(element => element.id == producto.id)
+        productoDescontado.stock = productoDescontado.stock - producto.cantidad;
+      });
+      //sobreescribimos los datos entro del archvio
+      fs.writeFile("product.json", JSON.stringify(data, null, 4), "utf-8", (error) => {
+        if (error) return res.status(500).send({ code: 500, message: "error al guardar el producto en el JSON" });
+        resolve(data)
+    
+      })
+    }).catch(error =>{
+      reject(error)
+    })
+  })
+
+}
+
 
 export default router;

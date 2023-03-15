@@ -101,4 +101,10 @@ router.get("/api/inventario", (req, res) => {
             })
         })
     })
+
+    const actualizarStock = () => {
+        
+    }
 export default router;
+
+

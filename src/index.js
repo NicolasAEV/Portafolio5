@@ -23,7 +23,6 @@ import apiInventario from './routes/inventory.routes.js';
 import apiVentas from './routes/ventas.routes.js'
 import err404 from './routes/404.routes.js'
 
-
 //en caso de utilizar envio entre servidores
 app.use(json());
 app.use(urlencoded({ extended: false }));
@@ -42,9 +41,6 @@ app.use(routerViews)
 
 // 
 app.use(err404)
-
-
-
 
 //asignamos la union de los archivo views
 app.set("views", join(__dirname, "views/"));
